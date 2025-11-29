@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Todo List</h1>
+        </header>
+
+        <form class="todo-form" id="todoForm">
+            <div class="form-group">
+                <label for="todoInput">Add a to do...</label>
+                <input type="text" id="todoInput" placeholder="Enter your task..." required>
+            </div>
+            <div class="form-group">
+                <label for="dateInput">Date</label>
+                <input type="date" id="dateInput" required>
+            </div>
+            <button type="submit">ADD TASK</button>
+        </form>
+
+        <div class="filter-section">
+            <h2>TASKS</h2>
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="pending">PENDING</button>
+                <button class="filter-btn" data-filter="completed">COMPLETED</button>
+            </div>
+        </div>
+
+        <div class="todo-list" id="todoList">
+            <!-- Todo items will be dynamically added here -->
+            <div class="empty-message">No task found</div>
+        </div>
+
+        <div class="delete-all-section">
+            <button id="deleteAllBtn" class="delete-all-btn">DELETE ALL</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
